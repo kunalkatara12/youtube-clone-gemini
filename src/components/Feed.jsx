@@ -1,9 +1,26 @@
-import React from 'react'
-
+import React from "react";
+import { Stack,Box } from "@mui/material";
 const Feed = () => {
   return (
-    <div>Feed</div>
-  )
-}
+    <Stack
+      sx={{
+        flexDirection: {
+          sx: "column",
+          md: "row",
+        },
+      }}
+    >
+      <Box
+        sx={{
+          height: { sx: "auto", md: "92vh" },
+          borderRight: "1px solid #3d3d3d",
+          px: { sx: 0, md: 2 },
+        }}
+      >
+        Sidebar
+      </Box>
+    </Stack>
+  );
+};
 
-export default Feed
+export default Feed;
