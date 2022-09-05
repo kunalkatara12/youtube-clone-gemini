@@ -1,5 +1,6 @@
 import React from "react";
-import { Stack,Box } from "@mui/material";
+import { Stack,Box, Typography } from "@mui/material";
+import Sidebar from "./Sidebar";
 const Feed = () => {
   return (
     <Stack
@@ -17,7 +18,10 @@ const Feed = () => {
           px: { sx: 0, md: 2 },
         }}
       >
-        Sidebar
+   <Sidebar/>
+
+        <Typography className='copyright' variant="body2" sx={{mt:1.5, color:"#fff"}}>
+          Copyright 2022</Typography>
       </Box>
     </Stack>
   );
