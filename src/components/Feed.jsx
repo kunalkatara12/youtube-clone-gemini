@@ -37,7 +37,7 @@ const Feed = () => {
         <Typography
           className="copyright"
           variant="body2"
-          sx={{ mt: 1.5, color: "#fff" }}
+          sx={{ mt: 1.5, color: "#196320" }}
         >
           Copyright 2022
         </Typography>
@@ -49,7 +49,7 @@ const Feed = () => {
           fontWeight="bold"
           sx={{ color: "white" }}
         >
-          {selectedCategory} <span style={{ color: "#F31503" }}>videos</span>
+          {selectedCategory} <span style={{ color: "#196320" }}>videos</span>
         </Typography>
         <Videos videos={videos} />
       </Box>

@@ -48,6 +48,7 @@ const VideoDetail = () => {
               sx={{ color: "#fff" }}
               py={1}
               px={2}
+              style={{zIndex:0}}
             >
               <Link to={`/channel/${channelId}`}>
                 <Typography
