@@ -8,7 +8,7 @@ const Navbar = () => (
     direction="row"
     alignItems="center"
     p={2}
-    style={{ zIndex: 2 ,backgroundColor:"#196320"}}
+    style={{ zIndex: 2, backgroundColor: "#196320" }}
     sx={{
       position: "sticky",
       background: "#196320",
@@ -20,9 +20,15 @@ const Navbar = () => (
       <img src={logo} alt="logo" height={45} />
     </Link>
     <SearchBar />
-    <Box>
-      <Button variant="contained">Login</Button>{" "}
-      <Button variant="contained">Signup</Button>
+    <Box
+      style={{ width: "15vw", display: "flex", justifyContent: "space-around" }}
+    >
+      <Link to="/loginpage">
+        <Button variant="contained">Login</Button>
+      </Link>{" "}
+      <Link to="/signuppage">
+        <Button variant="contained">Signup</Button>
+      </Link>
     </Box>
   </Stack>
 );
