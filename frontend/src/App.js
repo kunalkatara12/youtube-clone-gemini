@@ -4,7 +4,6 @@ import {
   ChannelDetail,
   VideoDetail,
   SearchFeed,
-  Navbar,
   Feed,
   LoginBox,
   SignupBox,
@@ -13,20 +12,19 @@ import { PrivateRoute } from "./utils/PrivateRoute";
 const App = () => (
   <BrowserRouter>
     <Box sx={{ backgroundColor: "#62cc74" }}>
-      <Navbar />
       <Routes>
-        <Route exact path="/" element={<PrivateRoute />}>
+        {/* <Route exact path="/" element={<PrivateRoute />}> */}
           <Route path="/" exact element={<Feed />} />
-        </Route>
-        <Route exact path="/video/:id" element={<PrivateRoute />}>
+        {/* </Route> */}
+        {/* <Route exact path="/video/:id" element={<PrivateRoute />}> */}
           <Route path="/video/:id" exact element={<VideoDetail />} />
-        </Route>
-        <Route exact path="/channel/:id" element={<PrivateRoute />}>
+        {/* </Route> */}
+        {/* <Route exact path="/channel/:id" element={<PrivateRoute />}> */}
           <Route path="/channel/:id" exact element={<ChannelDetail />} />
-        </Route>
-        <Route exact path="/search/:searchTerm" element={<PrivateRoute />}>
+        {/* </Route> */}
+        {/* <Route exact path="/search/:searchTerm" element={<PrivateRoute />}> */}
           <Route path="/search/:searchTerm" exact element={<SearchFeed />} />
-        </Route>
+        {/* </Route> */}
         <Route path="/loginpage" exact element={<LoginBox />}>
           {" "}
         </Route>

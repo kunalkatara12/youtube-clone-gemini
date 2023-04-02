@@ -12,11 +12,12 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <Typography
       variant="body2"
@@ -42,14 +43,24 @@ function Copyright(props) {
 // const theme = createTheme();
 
 export default function LoginBox() {
-   const navigate = useNavigate();
+  const auth = getAuth();
+  const navigate = useNavigate();
   const handleSubmit = (event) => {
-    event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    // console.log({
+    //   email: data.get("email"),
+    //   password: data.get("password"),
+    // });
+    signInWithEmailAndPassword(auth, data.get("email"), data.get("password"))
+      .then((res) => {
+        console.log(res.user);
+         navigate("/")
+      })
+      .catch((err) => {
+        alert("Something wrong occured")
+        console.log(err);
+      });
+    event.preventDefault();
   };
 
   return (
@@ -57,6 +68,7 @@ export default function LoginBox() {
     <Box
       // component="main"
       // maxWidth="xs"
+      style={{ marginTop: 0, height: "100vh" }}
       sx={{
         flexDirection: {
           sx: "column",
@@ -67,7 +79,7 @@ export default function LoginBox() {
       <CssBaseline />
       <Box
         sx={{
-          marginTop: 8,
+          paddingTop: 10,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -153,7 +165,7 @@ export default function LoginBox() {
 //   };
 //   const navigate = useNavigate();
 //   return (
-//     <Box minHeight="95vh">   
+//     <Box minHeight="95vh">
 //      <div className="content_Login">
 //       <h1>Login</h1>
 //       {!errorMessage && <div className="fail"> {errorMessage}</div>}

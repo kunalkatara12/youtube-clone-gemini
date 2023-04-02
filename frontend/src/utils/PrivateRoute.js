@@ -1,6 +1,15 @@
 import { Route, Navigate } from "react-router-dom";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 export const PrivateRoute = (props) => {
-    const user=null;
-    if(!user) return <Navigate to="/loginpage"/>
-    return <Route {...props}/>
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+      return <Route {...props}/>;
+        // ...
+    } else {
+        return <Navigate to="/loginpage" />;
+      }
+    });
+    // if(!props.user) 
+    // return 
 }
