@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# YouTube Clone - Gemini
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+YouTube Clone - Gemini is a React.js-based project that replicates the popular video-sharing platform YouTube, with some modifications and additional features. It provides users with a familiar interface and functionality while offering unique aspects for an enhanced user experience.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. Firebase-based Authentication System:
+   - Allows users to sign up and log in to the platform, ensuring secure access to personalized features and data.
 
-### `npm start`
+2. Video Search:
+   - Users can search for videos using the search box, similar to the search functionality on YouTube.
+   
+3. Topic-based Tabs:
+   - Explore and stay up-to-date on various topics with topic-based tabs such as music, education, movies, and gaming.
+   - Provides insights, recommended videos, and curated content related to each specific topic.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The project utilizes the following technologies:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React.js: A JavaScript library for building user interfaces, providing a robust foundation for the project's front-end development.
+- Material UI: A popular React UI framework for designing modern and responsive user interfaces with pre-built components and styling.
+- Firebase: A powerful backend platform that offers authentication services, real-time database, and cloud storage, ensuring a secure and reliable user experience.
+- Axios: A JavaScript library used for making HTTP requests to retrieve data from APIs.
+- API: Utilizes APIs to fetch video data and related information for search results and topic-based content.
